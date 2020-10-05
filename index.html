@@ -16,28 +16,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="./style.css" />
-    <title>Social media dashboard</title>
+    <script defer src="./app.js"></script>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <title>Social media dashboard</title>
   </head>
   <body class="dark">
     <div class="container">
-      <header>
-        <!-- Header headline -->
-        <div class="header-left">
-          <div class="header-headline-text">Social Media Dashboard</div>
-          <div class="header-headline-subtext">Total Followers: 23,004</div>
-        </div>
-        <!-- Dark/Light  Button -->
-        <div class="header-right">
-          <div class="header-toggler">Dark Mode</div>
-          <div class="toggler" id="toggler">
-            <div class="toggler-circle" id="toggler-circle"></div>
+      <div class="wrapper">
+        <header>
+          <!-- Header headline -->
+          <div class="header-left">
+            <div class="header-headline-text">Social Media Dashboard</div>
+            <div class="header-headline-subtext">Total Followers: 23,004</div>
           </div>
-        </div>
-      </header>
+
+          <!-- Dark/Light  Button -->
+          <div class="header-right">
+            <div class="header-toggler">Dark Mode</div>
+            <div class="toggle-btn" id="toggle-btn">
+              <div class="toggle-circle" id="toggle-circle"></div>
+            </div>
+          </div>
+        </header>
+      </div>
     </div>
     <!--       @nathanf 1987
     Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
