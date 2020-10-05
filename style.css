@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*  Dark Mode Color Schemes */
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --bg-top: hsl(232, 19%, 15%);
+  --bg-card: hsl(228, 28%, 20%);
+  --clr-subtext: hsl(228, 34%, 66%);
+  --clr-text: hsl(0, 0%, 100%);
+  --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+}
+
+/*  Light Mode Color Schemes */
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --bg-top: hsl(225, 100%, 98%);
+  --bg-card: hsl(227, 47%, 96%);
+  --clr-subtext: hsl(228, 12%, 44%);
+  --clr-text: hsl(230, 17%, 14%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-toggler {
+  font-weight: 700;
+}
