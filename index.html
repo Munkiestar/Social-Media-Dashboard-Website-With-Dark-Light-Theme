@@ -12,16 +12,20 @@
       href="./images/favicon-32x32.png"
     />
     <!--Font awesome CDN-->
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./app.js"></script>
 
     <title>Social media dashboard</title>
   </head>
-  <body class="dark">
+  <body class="light">
     <div class="container">
       <div class="wrapper">
         <header>
@@ -39,6 +43,74 @@
             </div>
           </div>
         </header>
+
+        <!-- Social Cards -->
+        <section class="social-cards">
+          <div class="social-card facebook">
+            <div class="card">
+              <a href="#" class="card-item"><i class="fab fa-facebook"></i></a>
+              <span class="card-name">@nathanf</span>
+            </div>
+            <div class="followers">
+              <span class="follower-number">1987</span>
+              <div class="follower">followers</div>
+            </div>
+            <div>
+              <img class="up-arrow" src="./images/icon-up.svg" alt="facebook" />
+              <span class="up-arrow">12 Today</span>
+            </div>
+          </div>
+          <div class="social-card twitter">
+            <div class="card">
+              <a href="#" class="card-item"><i class="fab fa-twitter"></i></a>
+              <span class="card-name">@nathanf</span>
+            </div>
+            <div class="followers">
+              <span class="follower-number">1044</span>
+              <div class="follower">followers</div>
+            </div>
+            <div>
+              <img class="up-arrow" src="./images/icon-up.svg" alt="twitter" />
+              <span class="up-arrow">99 Today</span>
+            </div>
+          </div>
+          <div class="social-card instagram">
+            <div class="card">
+              <a href="#" class="card-item"><i class="fab fa-instagram"></i></a>
+              <span class="card-name">@realnathanf</span>
+            </div>
+            <div class="followers">
+              <span class="follower-number">11k</span>
+              <div class="follower">followers</div>
+            </div>
+            <div>
+              <img
+                class="up-arrow"
+                src="./images/icon-up.svg"
+                alt="instagram"
+              />
+              <span class="up-arrow">1099 Today</span>
+            </div>
+          </div>
+          <div class="social-card youtube">
+            <div class="card">
+              <a href="#" class="card-item"><i class="fab fa-youtube"></i></a>
+              <span class="card-name">Nathan F.</span>
+            </div>
+            <div class="followers">
+              <span class="follower-number">8239</span>
+              <div class="follower">subscribers</div>
+            </div>
+            <div class="">
+              <img
+                class="down-arrow"
+                src="./images/icon-down.svg"
+                alt="youtube"
+              />
+              <span class="down-arrow">12 Today</span>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <!--       @nathanf 1987
