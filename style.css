@@ -34,7 +34,7 @@
   --clr-subtext: hsl(228, 34%, 66%);
   --clr-text: hsl(0, 0%, 100%);
   --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  --toggle: -moz-linear-gradient(right, #0c93c0, #fff);
+  --hover: #333a56;
 }
 
 /*  Light Mode Color Schemes */
@@ -44,6 +44,7 @@
   --bg-card: hsl(227, 47%, 96%);
   --clr-subtext: hsl(228, 12%, 44%);
   --clr-text: hsl(230, 17%, 14%);
+  --hover: #e1e3f0;
 }
 
 * {
@@ -127,10 +128,12 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .social-card {
   width: 100%;
+  min-width: 11.875rem; /* 190px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +141,14 @@ header {
   background-color: var(--bg-card);
   padding: 1.4rem 2rem;
   text-align: center;
+  cursor: pointer;
   border-radius: 5px;
+}
+
+/* all Cards hover */
+.social-card:hover,
+.card-overview:hover {
+  background-color: var(--hover);
 }
 
 .social-card .card {
@@ -196,41 +206,192 @@ header {
   margin-bottom: 2px;
 }
 
-.social-card .up-arrow {
+.up-arrow {
   color: var(--limeGreen);
   font-size: 0.8rem;
 }
 
-.social-card .down-arrow {
+.down-arrow {
   color: var(--brightRed);
   font-size: 0.8rem;
 }
+
 /* -------------------------------------------- */
 .social-card.facebook {
   border-top: 4px solid var(--facebook);
 }
-.social-card .fa-facebook {
+.fa-facebook {
   color: var(--facebook);
 }
 /* -------------------------------------------- */
 .social-card.twitter {
   border-top: 4px solid var(--twitter);
 }
-.social-card .fa-twitter {
+.fa-twitter {
   color: var(--twitter);
 }
 /* -------------------------------------------- */
 .social-card.instagram {
   border-top: 4px solid hsl(329, 70%, 58%);
 }
-.social-card .fa-instagram {
+.fa-instagram {
   color: var(--instagram);
 }
 /* -------------------------------------------- */
 .social-card.youtube {
   border-top: 4px solid var(--youTube);
 }
-
-.social-card .fa-youtube {
+.fa-youtube {
   color: var(--youTube);
+}
+
+/* Card Overviews */
+
+.card-heading {
+  color: var(--clr-text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-overviews {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-overview {
+  padding: 1rem 1.3rem;
+  background-color: var(--bg-card);
+  width: 100%;
+  height: auto;
+  min-width: 11.875rem; /* 190px; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-overview > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-overview > div:first-child {
+  margin-bottom: 0.8rem;
+}
+
+.card-overview .views {
+  color: var(--clr-subtext);
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.card-overview .nums {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+.card-overview .up-arrow img,
+.card-overview .down-arrow img {
+  margin-bottom: 2px;
+  margin-right: 3px;
+}
+
+/* -------------------------------------------- */
+
+/* #Device = Tablets, Ipads  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+  /* header {
+    flex-direction: column;
+  } */
+
+  /* .header-right {
+    justify-content: flex-start;
+  } */
+  .header-headline-text {
+    font-size: 1.7rem;
+  }
+
+  .social-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .card-overviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-overview {
+    padding: 1rem 3rem;
+  }
+}
+
+/* #Device = Most of the Smartphones Mobiles */
+@media (max-width: 767px) {
+  .wrapper {
+    width: 93%;
+    margin-bottom: 3rem;
+  }
+
+  header {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .header-right {
+    justify-content: space-between;
+  }
+
+  .header-left {
+    margin-bottom: 2rem;
+  }
+
+  .header-headline-text {
+    font-size: 1.6rem;
+  }
+
+  .header-border {
+    border-top: 1px solid var(--clr-subtext);
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+  }
+
+  .social-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-overviews {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .followers .follower-number {
+    font-size: 2.3rem;
+    margin-bottom: 3px;
+  }
+
+  .card-overview {
+    padding: 1rem 2rem;
+  }
 }
